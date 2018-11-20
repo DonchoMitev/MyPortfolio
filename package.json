@@ -1,0 +1,25 @@
+{
+  "name": "myportfolio",
+  "version": "1.0.0",
+  "description": "My Responsive Portfolio Website",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "sass": "node-sass -w scss/ -o docs/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DonchoMitev/MyPortfolio.git"
+  },
+  "author": "Doncho Mitev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DonchoMitev/MyPortfolio/issues"
+  },
+  "homepage": "https://github.com/DonchoMitev/MyPortfolio",
+  "dependencies": {
+    "node-sass": "^4.10.0"
+  }
+}
