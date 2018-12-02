@@ -13,4 +13,26 @@
     background: #fff;
     @include easeOut;
   }
+
+  // Rotate menu icons
+  &.close {
+    transform: rotate(180deg);
+
+    .btn-line {
+      //Rotate Line 1
+      &:nth-child(1) {
+        background: red;
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      //Rotate Line 3
+      &:nth-child(3) {
+        background: red;
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+    }
+  }
 }
