@@ -1,8 +1,8 @@
 .menu-btn {
-  position: absolute;
-  z-index: 3;
-  right: 35px;
-  top: 35px;
+  position: fixed;
+  z-index: 500;
+  left: 35px;
+  top: 10px;
   cursor: pointer;
   @include easeOut;
 
@@ -16,7 +16,7 @@
 
   // Rotate menu icons
   &.close {
-    transform: rotate(180deg);
+    transform: rotate(360deg);
 
     .btn-line {
       //Rotate Line 1
@@ -37,91 +37,71 @@
   }
 }
 
-//Menu
-
-.menu {
-  position: fixed;
+//General Menu
+.wrapper{
+  overflow:hidden;
+}
+section.site-title{
+  transition:all 400ms ease-in;
+}
+nav{
+  position:fixed;
   top:0;
-  width: 100%;
-  opacity: 0.9;
-  visibility: hidden;
+  left:0;
+  width:200px;
+  height:100%;
+  margin:0 0 0 -250px;
+  transition:all 400ms ease-in;
+}
 
-  &.show {
-    visibility: visible;
+.menu-branding {
+  width: 150px;
+  height: 150px;
+  margin:2rem 2rem 0 -250px;
+  background: url('../img/SmallUserProfile.png');
+  background-size: cover;
+  border-radius: 50px;
+  border: solid 2px $secondary-color;
+  transition:all 400ms ease-in;
+}
+.show {
+  nav {
+    margin-left: 0;
+  }
+  .menu-branding {
+    margin-left: 3rem;
+  }
+  .menu-btn {
+    left: 260px;
   }
 
-  &-branding, &-nav {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
-    float: left;
-    width: 50%;
-    height: 100vh;
-    overflow: hidden;
+  section.site-title {
+   transform: translate3d(260px, 0, 0);
   }
-  &-nav {
-    margin: 0;
-    padding: 0;
-    background: darken($primary-color, 5);
-    list-style: none;
-    transform: translate3d(0, -100%, 0);
-    @include easeOut;
-
-    &.show {
-      // slide from top
-      transform: translate3d(0, 0, 0);
-    }
-  }
-
-  // Branding Side
-  &-branding {
-    background: $primary-color;
-    transform: translate3d(0, 100%, 0);
-    @include easeOut;
-
-    &.show {
-      // slide from bottom
-      transform: translate3d(0, 0, 0);
-    }
-
-    .portrait {
-      width: 250px;
-      height: 250px;
-      background: url('../img/SmallUserProfile.png');
-      background-size: cover;
-      border-radius: 50px;
-      border: solid 2px $secondary-color;
-    }
-  }
-
-  .nav-item {
-    transform: translate3d(600px, 0, 0);
-    @include easeOut;
-    &.show {
-      // slide from right
-      transform: translate3d(0, 0, 0);
-    }
-
-    &.current > a {
-      color: $secondary-color;
-    }
-  }
-
-  .nav-link {
-    display: inline-block;
-    position: relative;
-    font-size: 30px;
-    text-transform: uppercase;
-    padding: 1rem 0;
-    font-weight: 400;
-    color: #fff;
-    text-decoration: none;
-    @include easeOut;
-    &:hover {
-      color: $secondary-color;
-    }
-  }
+}
+nav ul{
+  width:250px;
+  height:100%;
+  padding:200px 0 0 0;
+  margin:0;
+  list-style:none;
+  overflow:hidden;
+}
+nav li{
+  margin:0;
+}
+nav a{
+  color:#fff;
+  font-size:1.4rem;
+  text-decoration:none;
+  display:block;
+  padding:12px 15px;
+  font-weight:300;
+  letter-spacing:2px;
+  border-bottom:1px solid #333;
+}
+nav a:hover{
+  background:#111;
 }
 
 // Delay each nav items
