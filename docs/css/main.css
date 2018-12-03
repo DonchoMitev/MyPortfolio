@@ -1,14 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Courgette");
+* {
+  padding: 0;
+  margin: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+html {
+  font: 12px/1.5 'Courgette', cursive; }
+
+@media screen and (min-width: 500px) {
+  html {
+    font-size: 14px; } }
+
+@media screen and (min-width: 700px) {
+  html {
+    font-size: 16px; } }
+
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 18px; } }
+
+body, table, th, td, form, input, textarea, option, select {
+  font: inherit; }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  padding-bottom: 1em; }
+
+h1 {
+  font-size: 2.741em; }
+
+h2 {
+  font-size: 2.641em; }
+
+h3 {
+  font-size: 1.563em; }
+
+h5 {
+  font-size: 1.3em; }
+
+h6 {
+  font-size: 1em; }
+
+h5, h6 {
+  font-weight: bold; }
+
+p, ul, ol {
+  padding-bottom: 1.5em; }
+
+ul, ol {
+  padding-left: 2em; }
+
+li {
+  list-style-position: inside; }
+
 .menu-btn {
   position: fixed;
   z-index: 500;
   left: 35px;
   top: 10px;
   cursor: pointer;
+  transition: all 400ms ease-in;
   transition: all 0.5s ease-out; }
   .menu-btn .btn-line {
-    width: 27px;
-    height: 3px;
-    margin-bottom: 5px;
+    width: 30px;
+    height: 5px;
+    margin-bottom: 7px;
     background: #fff;
     transition: all 0.5s ease-out; }
   .menu-btn.close {
@@ -38,6 +99,9 @@ nav {
   transition: all 400ms ease-in; }
 
 .menu-branding {
+  display: inline;
+  position: absolute;
+  z-index: 500;
   width: 150px;
   height: 150px;
   margin: 2rem 2rem 0 -250px;
@@ -65,7 +129,8 @@ nav ul {
   padding: 200px 0 0 0;
   margin: 0;
   list-style: none;
-  overflow: hidden; }
+  overflow: hidden;
+  background: #333333; }
 
 nav li {
   margin: 0; }
@@ -107,15 +172,9 @@ nav a:hover {
   main#home h1 {
     margin-top: 10vh; } }
 
-* {
-  box-sizing: border-box; }
-
 body {
   color: #fff;
-  height: 100%;
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5; }
+  height: 100%; }
   body#bg-img {
     background: url(../img/background4.jpg), fixed;
     background-size: cover; }
@@ -128,15 +187,6 @@ body {
       height: 100%;
       z-index: -1;
       background: rgba(68, 68, 68, 0.9); }
-
-h1, h2, h3 {
-  margin: 0;
-  font-weight: 400; }
-  h1.lg-heading, h2.lg-heading, h3.lg-heading {
-    font-size: 6rem; }
-  h1.sm-heading, h2.sm-heading, h3.sm-heading {
-    margin-bottom: 2rem;
-    padding: 0.2rem 1rem; }
 
 a {
   color: #fff;

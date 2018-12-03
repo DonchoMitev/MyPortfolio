@@ -4,12 +4,13 @@
   left: 35px;
   top: 10px;
   cursor: pointer;
+  transition:all 400ms ease-in;
   @include easeOut;
 
   .btn-line {
-    width: 27px;
-    height: 3px;
-    margin-bottom: 5px;
+    width: 30px;
+    height: 5px;
+    margin-bottom: 7px;
     background: #fff;
     @include easeOut;
   }
@@ -55,6 +56,9 @@ nav{
 }
 
 .menu-branding {
+  display: inline;
+  position: absolute;
+  z-index: 500;
   width: 150px;
   height: 150px;
   margin:2rem 2rem 0 -250px;
@@ -86,6 +90,7 @@ nav ul{
   margin:0;
   list-style:none;
   overflow:hidden;
+  background: #333333;
 }
 nav li{
   margin:0;

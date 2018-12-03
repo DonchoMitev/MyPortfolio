@@ -1,33 +1,17 @@
-@import "mixins";
+@import "reset";
 @import "variables";
+@import "typography";
+@import "mixins";
+
 @import "menu";
 @import "mobile";
-* {
-  box-sizing: border-box;
-}
 
 body {
   @include background;
   color: #fff;
   height: 100%;
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5;
 }
 
-h1, h2, h3 {
-  margin: 0;
-  font-weight: 400;
-  &.lg-heading {
-    font-size: 6rem;
-  }
-
-  &.sm-heading {
-    margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-    //background: rgba(lighten($primary-color, 0.5), 0.5);
-  }
-}
 
 a {
   color: #fff;
