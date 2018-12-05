@@ -1,11 +1,11 @@
+//Hamburger menu icon
 .menu-btn {
   position: fixed;
   z-index: 500;
-  left: 35px;
-  top: 10px;
+  left: 1rem;
+  top: 1rem;
   cursor: pointer;
-  transition:all 400ms ease-in;
-  @include easeOut;
+  transition: all 0.5s ease-in-out;
 
   .btn-line {
     width: 30px;
@@ -39,20 +39,48 @@
 }
 
 //General Menu
-.wrapper{
-  overflow:hidden;
+.wrapper {
+  overflow: hidden;
 }
-section.site-title{
-  transition:all 400ms ease-in;
+
+section.site-title {
+  transition: all 400ms ease-in;
 }
-nav{
-  position:fixed;
-  top:0;
-  left:0;
-  width:200px;
-  height:100%;
-  margin:0 0 0 -250px;
-  transition:all 400ms ease-in;
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  margin: 0 0 0 -250px;
+  transition: all 400ms ease-in;
+  ul {
+    width: 20rem;
+    height: 100%;
+    padding: 16rem 0 0 2rem;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+    background: #333333;
+
+    li a {
+      color: #fff;
+      font-size: 1.4rem;
+      text-decoration: none;
+      display: block;
+      padding: 12px 15px;
+      font-weight: 300;
+      letter-spacing: 2px;
+      border-bottom: 1px solid #333;
+
+      &:hover {
+        color: $secondary-color;
+        background: #111;
+        @include easeOut;
+      }
+    }
+  }
 }
 
 .menu-branding {
@@ -61,13 +89,14 @@ nav{
   z-index: 500;
   width: 150px;
   height: 150px;
-  margin:2rem 2rem 0 -250px;
+  margin: 2rem 2rem 0 -250px;
   background: url('../img/SmallUserProfile.png');
   background-size: cover;
   border-radius: 50px;
   border: solid 2px $secondary-color;
-  transition:all 400ms ease-in;
+  transition: all 400ms ease-in;
 }
+
 .show {
   nav {
     margin-left: 0;
@@ -79,35 +108,8 @@ nav{
     left: 260px;
   }
 
-  section.site-title {
-   transform: translate3d(260px, 0, 0);
-  }
 }
-nav ul{
-  width:250px;
-  height:100%;
-  padding:200px 0 0 0;
-  margin:0;
-  list-style:none;
-  overflow:hidden;
-  background: #333333;
-}
-nav li{
-  margin:0;
-}
-nav a{
-  color:#fff;
-  font-size:1.4rem;
-  text-decoration:none;
-  display:block;
-  padding:12px 15px;
-  font-weight:300;
-  letter-spacing:2px;
-  border-bottom:1px solid #333;
-}
-nav a:hover{
-  background:#111;
-}
+
 
 // Delay each nav items
 @for $x from 1 through 4 {
