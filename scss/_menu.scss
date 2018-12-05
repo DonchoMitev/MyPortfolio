@@ -11,8 +11,8 @@
     width: 30px;
     height: 5px;
     margin-bottom: 7px;
-    background: #fff;
-    @include easeOut;
+    background: white;
+    transition: all 0.5s ease-in-out;
   }
 
   // Rotate menu icons
@@ -32,31 +32,24 @@
       //Rotate Line 3
       &:nth-child(3) {
         background: $secondary-color;
-        transform: rotate(-45deg) translate(7px, -6px);
+        transform: rotate(-45deg) translate(12px, -12px);
       }
     }
   }
 }
 
 //General Menu
-.wrapper {
-  overflow: hidden;
-}
-
-section.site-title {
-  transition: all 400ms ease-in;
-}
 
 nav {
   position: fixed;
+  z-index: 500;
   top: 0;
   left: 0;
-  width: 200px;
   height: 100%;
-  margin: 0 0 0 -250px;
+  margin: 0 0 0 -16rem;
   transition: all 400ms ease-in;
   ul {
-    width: 20rem;
+    width: 16rem;
     height: 100%;
     padding: 16rem 0 0 2rem;
     margin: 0;
@@ -83,12 +76,12 @@ nav {
   }
 }
 
-.menu-branding {
+.menu-portrait {
   display: inline;
   position: absolute;
-  z-index: 500;
-  width: 150px;
-  height: 150px;
+  z-index: 999;
+  width: 10rem;
+  height: 10rem;
   margin: 2rem 2rem 0 -250px;
   background: url('../img/SmallUserProfile.png');
   background-size: cover;
@@ -98,14 +91,14 @@ nav {
 }
 
 .show {
+  .menu-portrait {
+    margin-left: 2rem;
+  }
   nav {
     margin-left: 0;
   }
-  .menu-branding {
-    margin-left: 3rem;
-  }
   .menu-btn {
-    left: 260px;
+    left: 17rem;
   }
 
 }

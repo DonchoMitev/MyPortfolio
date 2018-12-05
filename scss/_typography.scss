@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding-bottom: 1em;
 }
 
-$headings: (h1: 2.741em, h2: 2.641em, h3: 1.563em, h5: 1.3em, h6: 1em);
+$headings: (h1: 3.741em, h2: 2.641em, h3: 1.563em, h5: 1.3em, h6: 1em);
 
 //loop headings and put size on each of them
 @each $heading, $size in $headings {
