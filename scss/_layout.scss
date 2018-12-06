@@ -1,23 +1,18 @@
 body {
-  height: 100%;
-}
 
-a {
-  color: #fff;
-  text-decoration: none;
+}
+main > section{
+  height: 100vh;
+  background: linear-gradient(rgba(25, 25, 25, 0.8), rgba(20, 20, 20, 0.8)), url("../img/background4.jpg") no-repeat center;
 }
 
 .text-secondary {
   color: $secondary-color;
 }
 
+//All pages first section style
 main {
-  background: linear-gradient(rgba(25, 25, 25, 0.8), rgba(20, 20, 20, 0.8)), url("../img/background4.jpg") no-repeat center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4rem;
-  height: 100vh;
+
   &:after {
     content: '';
     position: absolute;
@@ -47,13 +42,9 @@ main {
   }
 }
 
-.about {
-  padding: 6rem;
-  .info {
-    display: flex;
-  }
-}
 
+
+//Style section - open menu
 body.show {
   main {
     &:after {
@@ -63,10 +54,51 @@ body.show {
   }
 }
 
+.site-title {
+  padding: 14rem;
+}
+
 .name-heading {
   color: white;
 }
 
 .info-heading {
   color: white;
+}
+
+.certificates {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .certf-info {
+    flex-basis: 24rem;
+    justify-content: space-between;
+    display: flex;
+  }
+}
+
+.container {
+  width: 25rem;
+  height: auto;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+//About page
+
+.about {
+  .aboutMe {
+    .more-about-me {
+      padding: 0 4rem;
+      .container {
+        width: 15rem;
+      }
+    }
+    .info {
+      display: flex;
+    }
+  }
+
 }
