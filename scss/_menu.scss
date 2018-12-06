@@ -51,49 +51,51 @@ nav {
   ul {
     width: 16rem;
     height: 100%;
-    padding: 16rem 0 0 2rem;
+    padding: 2rem 0 0 2rem;
     margin: 0;
     list-style: none;
     overflow: hidden;
     background: #333333;
 
-    li a {
-      color: #fff;
-      font-size: 1.4rem;
-      text-decoration: none;
-      display: block;
-      padding: 12px 15px;
-      font-weight: 300;
-      letter-spacing: 2px;
-      border-bottom: 1px solid #333;
+    .menu-portrait {
+      width: 9rem;
+      height: auto;
+      img {
+        border: 1px solid $secondary-color;
+        border-radius: 50%;
+        width: 100%;
+        height: auto;
+      }
+    }
 
-      &:hover {
-        color: $secondary-color;
-        background: #111;
-        @include easeOut;
+    li:first-of-type {
+      padding-bottom: 2rem;
+    }
+
+    li {
+      padding-bottom: 0.3rem;
+      a {
+        color: #fff;
+        font-size: 1.4rem;
+        text-decoration: none;
+        padding: 1rem;
+        display: block;
+        font-weight: 300;
+        letter-spacing: 2px;
+        border-bottom: 1px solid #333;
+
+        &:hover {
+          color: $secondary-color;
+          @include easeOut;
+        }
       }
     }
   }
 }
 
-.menu-portrait {
-  display: inline;
-  position: absolute;
-  z-index: 999;
-  width: 10rem;
-  height: 10rem;
-  margin: 2rem 2rem 0 -250px;
-  background: url('../img/SmallUserProfile.png');
-  background-size: cover;
-  border-radius: 50px;
-  border: solid 2px $secondary-color;
-  transition: all 400ms ease-in;
-}
+
 
 .show {
-  .menu-portrait {
-    margin-left: 2rem;
-  }
   nav {
     margin-left: 0;
   }
