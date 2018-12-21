@@ -148,18 +148,20 @@ body.show:after {
         height: auto;
         border: 2px solid #00A7E6;
         border-radius: 8px; }
-  .about .skills article {
-    flex: 1 0 15rem;
-    padding-right: 1rem;
-    margin-right: 1rem; }
-    .about .skills article .skills-info ul {
-      text-align: left; }
-  .about .skills .logos {
-    width: 9rem;
-    height: auto;
-    margin: 1rem auto; }
-    .about .skills .logos img {
-      width: 100%; }
+  .about .skills {
+    padding: 2rem; }
+    .about .skills article {
+      flex: 1 0 15rem;
+      padding-right: 1rem;
+      margin-right: 1rem; }
+      .about .skills article .skills-info ul {
+        text-align: left; }
+    .about .skills .logos {
+      width: 9rem;
+      height: auto;
+      margin: 1rem auto; }
+      .about .skills .logos img {
+        width: 100%; }
 
 .menu-btn {
   position: fixed;
