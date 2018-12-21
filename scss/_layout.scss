@@ -19,9 +19,6 @@ body {
   color: white;
 }
 
-body section {
-  padding: 2rem 1.5rem;
-}
 
 .text-secondary {
   color: $secondary-color;
@@ -145,7 +142,12 @@ body.show {
 
     article {
       flex:1 0 15rem;
-      padding-right: 2rem;
+      padding-right: 1rem;
+      margin-right: 1rem;
+
+      .skills-info ul{
+        text-align: left;
+      }
     }
     .logos {
       width: 9rem;
