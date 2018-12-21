@@ -19,13 +19,24 @@ body {
   color: white;
 }
 
+body section {
+  padding: 2rem 1.5rem;
+}
+
 .text-secondary {
   color: $secondary-color;
 }
 
-//All pages first section style
-main {
+//Flex class
+.flex {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
+
+//Home Page
+.site-homepage {
   .icons {
     margin-top: 1rem;
 
@@ -56,29 +67,30 @@ body.show {
 
 }
 
-.name-heading {
-  color: white;
-}
+.current {
+  a {
+    color: $secondary-color;
+  }
 
-.info-heading {
-  color: white;
 }
 
 .container {
-  width: 35rem;
+  width: auto;
   height: auto;
+  text-align: center;
   img {
-    width: 100%;
+    width: 13rem;
     height: auto;
+    margin-bottom: 2rem;
   }
 }
 
 //Cerificates page
 
 .certificates {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  h3 {
+    text-align: center;
+  }
   article {
     border: 1px solid orange;
     border-radius: 8px;
@@ -95,24 +107,29 @@ body.show {
   }
   .certf-info {
     border-radius: 2px solid $secondary-color;
-    width: 30rem;
+    width: 25rem;
     justify-content: space-between;
-    display: flex;
   }
 }
 
 //About Page
 .about {
   padding: 4rem 10rem;
-  h4 {
+  h3, h4 {
     text-align: center;
   }
-  .bio {
-    display: flex;
-    justify-content: space-between;
+
+  h3 {
     padding-bottom: 2rem;
+  }
+  .bio {
+    padding-bottom: 2rem;
+
+    div:nth-child(2) {
+      width: 75%;
+    }
     .about-image {
-      width: 20rem;
+      width: 11rem;
       height: auto;
       img {
         width: 100%;
@@ -121,18 +138,14 @@ body.show {
         border-radius: 8px;
       }
     }
-    p {
-      padding-left: 1rem;
-    }
 
   }
 
   .skills {
-    display: flex;
-    justify-content: space-between;
 
     article {
-      padding: 2rem;
+      flex:1 0 15rem;
+      padding-right: 2rem;
     }
     .logos {
       width: 9rem;
@@ -143,5 +156,6 @@ body.show {
       }
     }
   }
-
 }
+
+

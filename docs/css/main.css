@@ -77,88 +77,92 @@ body {
     z-index: 2;
     background: rgba(68, 68, 68, 0.7); }
 
+body section {
+  padding: 2rem 1.5rem; }
+
 .text-secondary {
   color: #00A7E6; }
 
-main .icons {
+.flex {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+
+.site-homepage .icons {
   margin-top: 1rem; }
-  main .icons a {
+  .site-homepage .icons a {
     color: white;
     padding: 0.4rem;
     text-decoration: none; }
-    main .icons a:hover {
+    .site-homepage .icons a:hover {
       color: #00A7E6;
       transition: all 0.5s ease-out; }
 
-main.home {
+.site-homepage.home {
   overflow: hidden; }
 
 body.show:after {
   display: block;
   transition: all 0.5s ease-out; }
 
-.name-heading {
-  color: white; }
-
-.info-heading {
-  color: white; }
+.current a {
+  color: #00A7E6; }
 
 .container {
-  width: 35rem;
-  height: auto; }
+  width: auto;
+  height: auto;
+  text-align: center; }
   .container img {
-    width: 100%;
-    height: auto; }
+    width: 13rem;
+    height: auto;
+    margin-bottom: 2rem; }
 
-.certificates {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap; }
-  .certificates article {
-    border: 1px solid orange;
-    border-radius: 8px;
-    padding: 1rem;
-    margin: 2rem; }
-    .certificates article:hover {
-      transform: scale(1.1);
-      transition: all 0.5s ease-out; }
-    .certificates article p {
-      padding-left: 1rem; }
-  .certificates .certf-info {
-    border-radius: 2px solid #00A7E6;
-    width: 30rem;
-    justify-content: space-between;
-    display: flex; }
+.certificates h3 {
+  text-align: center; }
+
+.certificates article {
+  border: 1px solid orange;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 2rem; }
+  .certificates article:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-out; }
+  .certificates article p {
+    padding-left: 1rem; }
+
+.certificates .certf-info {
+  border-radius: 2px solid #00A7E6;
+  width: 25rem;
+  justify-content: space-between; }
 
 .about {
   padding: 4rem 10rem; }
-  .about h4 {
+  .about h3, .about h4 {
     text-align: center; }
-  .about .bio {
-    display: flex;
-    justify-content: space-between;
+  .about h3 {
     padding-bottom: 2rem; }
+  .about .bio {
+    padding-bottom: 2rem; }
+    .about .bio div:nth-child(2) {
+      width: 75%; }
     .about .bio .about-image {
-      width: 20rem;
+      width: 11rem;
       height: auto; }
       .about .bio .about-image img {
         width: 100%;
         height: auto;
         border: 2px solid #00A7E6;
         border-radius: 8px; }
-    .about .bio p {
-      padding-left: 1rem; }
-  .about .skills {
-    display: flex;
-    justify-content: space-between; }
-    .about .skills article {
-      padding: 2rem; }
-    .about .skills .logos {
-      width: 9rem;
-      height: auto;
-      margin: 1rem auto; }
-      .about .skills .logos img {
-        width: 100%; }
+  .about .skills article {
+    flex: 1 0 15rem;
+    padding-right: 2rem; }
+  .about .skills .logos {
+    width: 9rem;
+    height: auto;
+    margin: 1rem auto; }
+    .about .skills .logos img {
+      width: 100%; }
 
 .menu-btn {
   position: fixed;
