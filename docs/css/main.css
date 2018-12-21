@@ -253,6 +253,8 @@ nav {
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
+  .site-homepage {
+    padding: 0 2rem; }
   .about {
     padding: 2rem 0; }
     .about .skills-info ul {
